@@ -4,6 +4,11 @@
   "manifest_version": 2,
   "name": "망갤 길드아지트 사다리",
   "description": "마비노기 영웅전 길드아지트 추첨 프로그램",
+  "icons": {
+    "16": "16icon.png",
+    "48": "48icon.png",
+    "128": "128icon.png"
+  },
   "content_security_policy": "script-src 'self' https://www.gstatic.com/firebasejs/5.3.0/firebase.js; object-src 'self'",
   "permissions": [
     "storage",
@@ -28,10 +33,5 @@
   ],
   "browser_action": {
     "default_popup": "ladder_game.html"
-  },
-  "icons": {
-    "16": "./asset/images/icon16.png",
-    "48": "./asset/images/icon48.png",
-    "128": "./asset/images/icon128.png"
   }
 }
