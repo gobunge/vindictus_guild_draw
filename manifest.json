@@ -30,8 +30,8 @@
     "default_popup": "ladder_game.html"
   },
   "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "16": "./asset/images/icon16.png",
+    "48": "./asset/images/icon48.png",
+    "128": "./asset/images/icon128.png"
   }
 }
