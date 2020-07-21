@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>SL option</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+	<style>
+		.popup-container {
+			width: 700px;
+			padding: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="popup-container">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<h2 class="text-center">망갤 길드 아지트 사다리</h2>
+				<hr />
+				<form class="form-inline">
+					<div id="no-nexon" class="alert alert-danger">
+						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						<strong>주의!</strong> <br />
+						현재 활성화된 탭이 마비노기 영웅전 길드아지트 사이트가 아닙니다. </br>
+						사다리를 돌릴 마비노기 영웅전 길드아지트 사이트로 이동해주세요. </br>
+						예시) http://heroes.nexon.com/community/guild/AgitDetail?BoardID=000000&PostID=000000
+					</div>
+					<div id="input_div">
+						<h4>당첨자 수 :<input type="text" size="25" value="1" id="count">
+							<input type="button" value="-" id="minus_btn">
+							<input type="button" value="+" id="plus_btn">
+						</h4>
+					</div>
+					<div class="form-group">
+						<button id="start_btn" type="button" class="btn btn-success">사다리 돌리기</button>
+					</div>
+				</form>
+				<div class="test hidded">
+					<h3>최근 당첨자 (10명) </h3>
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">캐릭터 명</th>
+								<th scope="col">소속 길드명</th>
+								<th scope="col">당첨 시간</th>
+							</tr>
+						</thead>
+						<tbody id="recent-winner-list"></tbody>
+					</table>
+					<hr />
+					<div class="test hidded">
+						<h3>사다리 참가자 명단</h3>
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">캐릭터 명</th>
+									<th scope="col">소속 길드 명</th>
+									<th scope="col">댓글 작성 일시</th>
+								</tr>
+							</thead>
+							<tbody id="attendee-list"></tbody>
+						</table>
+						<hr>
+						<div class="ladder-info">
+							<h2 class="total-attendee"></h2>
+							<h2 class="winner"></h2>
+							<div id="download-btn"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="test"></div>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/html2canvas.js"></script>
+		<script type="text/javascript" src="bower_components/chrome-extension-async/chrome-extension-async.js"></script>
+		<script type="text/javascript" src="ladder_game.js"></script>
+</body>
+
+</html>

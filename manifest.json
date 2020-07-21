@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "version_name": "1.0 beta",
+  "manifest_version": 2,
+  "name": "망갤 길드아지트 사다리",
+  "description": "마비노기 영웅전 길드아지트 사이트 사다리게임 확장프로그램",
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/firebasejs/5.3.0/firebase.js; object-src 'self'",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "*://heroes.nexon.com/*"
+  ],
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "ladder_game.js"
+      ],
+      "matches": [
+        "*://heroes.nexon.com/community/guild"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "ladder_game.html"
+  }
+}
